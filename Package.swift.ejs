@@ -1,0 +1,20 @@
+// swift-tools-version:5.5
+import PackageDescription
+
+let package = Package(
+    name: "MarvelAPI",
+    products: [
+        .library(
+            name: "MarvelAPI",
+            targets: ["MarvelAPI"]
+        ),
+    ],
+    dependencies: [],
+    targets: [
+        .binaryTarget(
+            name: "MarvelAPI",
+            url: "https://github.com/onakama/MarvelRepository/releases/download/<%= version %>/MarvelAPI.xcframework.zip",
+            checksum: "<%= checksum %>"
+        ),
+    ]
+)
